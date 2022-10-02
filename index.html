@@ -1,50 +1,128 @@
+<h2><center>The Top 10 Of My Best Friend</center></h2>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <style>
-    h1{
-        color: blue;
-        cursor: pointer;
-        transition: 0,2s;
-        font-weight: bold;
-    }
-    h1:hover{
-        color: aqua;
-        letter-spacing: 2px;
-    }
+  td{
+    cursor: pointer;
+    transition: .2s;
+  }
 
-    img{
-        width: 200px;
-        height: 250px;
-        border-radius: 100%;
-        box-shadow: 1px 1px 4px gray;
-        padding: 5px;
-        background: white;
-        transition: .2s;
-        margin: 20px;
-        opacity: 75%;
-        cursor: pointer;
-    }
+  td:hover{
+    background: white;
+  }
+  .tabelku {
+    color: black;
+    width: 100%;
+    height: 300px;
+    max-width: 800px;
+  }
 
-    img:hover{
-        transform: scale(1.2);
-        opacity: 100%;
-        box-shadow: 1px 1px 6px aqua;
-    }
-</style>
+ table{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 40px;
+  flex-direction: column;
+  align-items: center;
+ }
+</style>  
+<table class="tabelku">
+  <body bgcolor="grey">
+  <tr>
+    <td bgcolor="blue">No</td>
+    <td bgcolor="blue"><center>Nama</center></td>
+    <td bgcolor="blue"><center>Alamat</center></td>
+    <td bgcolor="blue"><center>Aksi</center></td>
+  </tr>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nafisa MS</title>
-</head>
-<body>
-    <h1>Hello World HTML!</h1>
-    <p>Saya Nafisa Maysa Salma, NIM 41226185</p>
+  <tr id="row_1">
+    <td bgcolor="blue" class="text" id="nomor1">1</td>
+    <td bgcolor="pink" class="nama_mhs">Nanda</td>
+    <td bgcolor="pink" class="text" id="alamat1">lemah abang</td>
+    <td bgcolor="pink" class="hapus" id="hapus_1">Hapus</td>
+  </tr>
 
-    <img src="foto.jpeg" alt="Nafisa Maysa Salma">
+  <tr id="row_2">
+    <td bgcolor="blue" class="text" id="nomor2">2</td>
+    <td bgcolor="pink" class="nama_mhs">Nafisa</td>
+    <td bgcolor="pink"class="text" id="alamat2">Beber</td>
+    <td bgcolor="pink" class="hapus" id="hapus_2">Hapus</td>
+  </tr>
 
-    <hr>
-    <button onclick="alert('Hello Javascript!')">Hello World Javascript</button>
-</body>
-</html>
+  <tr id="row_3">
+    <td bgcolor="blue" class="text" id="nomor3">3</td>
+    <td bgcolor="pink" class="nama_mhs">Ezar</td>
+    <td bgcolor="pink"class="text" id="alamat3">Plered</td>
+    <td bgcolor="pink" class="hapus" id="hapus_3">Hapus</td>
+  </tr>
+
+  <tr id="row_4">
+    <td bgcolor="blue" class="text" id="nomor4">4</td>
+    <td bgcolor="pink" class="nama_mhs">Memey</td>
+    <td bgcolor="pink"class="text" id="alamat4">Kondangsari</td>
+    <td bgcolor="pink" class="hapus" id="hapus_4">Hapus</td>
+  </tr>
+
+  <tr id="row_5">
+    <td bgcolor="blue" class="text" id="nomor5">5</td>
+    <td bgcolor="pink" class="nama_mhs">Salma</td>
+    <td bgcolor="pink"class="text" id="alamat5">Cikancas Sijati</td>
+    <td bgcolor="pink" class="hapus" id="hapus_5">Hapus</td>
+  </tr>
+
+  
+ 
+
+  <h2><center><a bgcolor="blue" href="index.html" onclick="return confirm('Yakin mau kembali?')">Home</a></center></h2>
+
+</table>
+
+<script>
+
+  $(document).ready(function(){ $('.text').click(function(){ 
+   let text = $(this).text();
+   alert(`Anda mengklik text yang berisi text "${text}"`);
+   if(text!='HAPUS'){ 
+    let text2 = prompt('Mau diubah?:', text);
+    if(!text2) return; $(this).text(text2); }
+    else{ let yakin = confirm('Yakin?'); if(!yakin) return;  } 
+  }) 
+}) 
+
+  $(document).ready(function(){
+    //alert(0)
+    $('.nama_mhs').click(function(){
+      //alert(1)
+      let isi= $(this).text();
+      //alert(isi);
+      let isi2 = prompt('Ubah dengan:', isi);
+      if (!isi2) return;
+      //alert(isi2);
+
+      $(this).text(isi2);
+    })
+
+
+    $('.hapus').click(function(){
+      //alert(1)
+      let yakin = confirm('Yakin mau menghapus?');
+      if(!yakin) return;
+
+      let id = $(this).prop('id');
+      //alert(id);
+
+      let rid = id.split('_');
+      let baris_ke = rid[1];
+
+      //alert(baris_ke);
+
+      $('#row_'+baris_ke).slideUp()
+
+      //alert('Anda yakin')
+    })
+
+  })
+
+
+</script>
