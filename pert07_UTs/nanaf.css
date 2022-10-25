@@ -1,0 +1,98 @@
+body {
+    font-family: helvetica;
+    font-size: 0.95em;font-style: italic;
+    background-image: url("wibu.jpg"); width: 100%;
+   }
+img {
+    width: 4cm;
+    height: 7cm;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 4px rgb(247, 3, 117);
+    padding: 3px;
+    transition: 0.5s;
+    letter-spacing: 2px;
+  }
+  img:hover {
+    transform: scale(1.1);
+  }
+  h1 {
+    color: rgb(247, 3, 117);
+  }
+  h2 {
+    margin: 15px;
+    text-align: center;
+    color: rgb(247, 3, 117);
+  }
+  .content {
+    margin-right: auto;
+    margin-left: auto;
+    width: 300px;
+  }
+  
+  .header {
+    background-color: white;
+    padding: 5px 10px 20px;
+    text-align: center;
+    border: 1px #66ee0f;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .navigator{
+   display: block;
+   background-color:pink;
+   height:50px;
+   font-weight: bold;
+   border-radius: 10px;
+   align-items: center;
+  }
+  
+  .navigator a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  #menu {  
+   position:relative;
+   line-height:30px;
+   margin:0;
+   padding:0;
+   list-style-type:none;
+   list-style-position:outside;
+  }
+  
+  .muncul{
+    background-color: rgb(114, 211, 250);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    color: black;
+    border-radius: 25px;
+    margin-top: 5px;
+  }
+  
+  #home{
+      background-color: rgb(114, 211, 250);
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      padding: 50px;
+      color: black;
+      border-radius: 10px;
+      margin-top: 5px;
+  }
+  .active {
+    background-color: rgb(114, 211, 250);
+    border-radius: 5px;
+  }
+  
+  
+  #menu li a {float:left; margin:10px;}
+  .clear {clear:both;}
+  
+  #seleksi { color: blue;}
+  
+  .active { color: red; font-weight: bold; }
